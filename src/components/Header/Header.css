@@ -1,0 +1,247 @@
+header {
+    padding: 25px 0 30px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    width: 1060px;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.adaptive__menu {
+    display: none;
+}
+
+.header__elem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    float: left;
+    margin-right: 15px;
+}
+
+.logo__text {
+    font: 400 12px/16px var(--font-text);
+    color: #343434;
+    margin-top: 7px;
+}
+
+.phone a {
+    font: 600 18px/25px var(--font-text);
+    color: #000;
+}
+
+.phone p {
+    font: 400 15px/20px var(--font-text);
+    color: #999;
+}
+
+.menu__box {
+    display: flex;
+    gap: 24px;
+}
+
+.menu__item{
+    font: 400 14px/19px var(--font-text);
+    color: #000;
+    transition: 0.3s;
+}
+
+.menu__item:hover {
+    transition: 0.3s;
+    color: #D15700;
+}
+
+#header_sticky {
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: inherit;
+    padding: 10px 0;
+}
+
+.header_sticky_logo {
+    display: none;
+}
+
+#menu__toggle{
+    display: none;
+}
+
+.btn-sm{
+    display: none;
+}
+
+
+/* adaptive */
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 5%;
+    }
+    .header {
+        max-width: 100%;
+    }
+
+    .header__elem {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 5% 2%;
+    }
+
+    .header {
+        max-width: 100%;
+    }
+
+    .header__elem {
+        justify-content: space-between;
+    }
+
+    .adaptive__menu {
+        display: block;
+        overflow: hidden;
+    }
+
+    .menu__item{
+        padding: 0 20px 0 0;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 0;
+    }
+
+    .header {
+        max-width: 100%;
+        flex-direction: column;
+    }
+
+    .header__elem {
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    .header__logo{
+        margin-bottom: 15px;
+    }
+
+    .header__item{
+        display: flex;
+        align-items: center;
+    }
+
+    .phone{
+        margin-right: 50px;
+    }
+
+    .button_orange{
+        display: none;
+    }
+
+    .btn-sm{
+        display: block;
+    }
+
+    #menu__toggle {
+        opacity: 0;
+        display: block;
+    }
+
+    #menu__toggle:checked + .menu__btn > span {
+        transform: rotate(45deg);
+    }
+
+    #menu__toggle:checked + .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0deg);
+    }
+
+    #menu__toggle:checked + .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    #menu__toggle:checked ~ .menu__box {
+        left: 0;
+    }
+
+    .menu__btn {
+        position: fixed;
+        top: 32px;
+        right: 14px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background-color: #ed5d08;
+        transition-duration: .25s;
+    }
+
+    .menu__btn > span::before {
+        content: '';
+        top: -12px;
+    }
+
+    .menu__btn > span::after {
+        content: '';
+        top: 12px;
+    }
+
+    .menu__box {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        background-color: #fff;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+        transition-duration: .25s;
+    }
+
+    .menu__item {
+        display: block;
+        padding: 12px 24px;
+        color: #000;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+        transition-duration: .25s;
+    }
+    .menu__item:hover {
+        background-color: #CFD8DC;
+    }
+}
