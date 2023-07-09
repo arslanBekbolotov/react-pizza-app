@@ -23,6 +23,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.header__logo{
+    margin: 20px 0 20px;
 }
 
 #logo {
@@ -36,14 +41,13 @@ header {
     margin-top: 7px;
 }
 
-.phone a {
-    font: 600 18px/25px var(--font-text);
-    color: #000;
-}
-
-.phone p {
-    font: 400 15px/20px var(--font-text);
-    color: #999;
+.search_input{
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 12px 20px 12px 42px;
+    width: 400px;
+    margin: 20px 0 20px;
 }
 
 .menu__box {
@@ -86,6 +90,38 @@ header {
     display: none;
 }
 
+.button--cart{
+    display: flex;
+    align-items: center;
+    line-height: 23px;
+    padding: 12px 25px;
+    -webkit-touch-callout: none;
+    background-color: #fe5f1e;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    cursor: pointer;
+    min-width: 100px;
+    text-align: center;
+    transition: background-color .15s ease-in-out,border-color .15s ease-in-out;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color:#fff;
+}
+
+.button__delimiter{
+    background-color: hsla(0,0%,100%,.25);
+    height: 25px;
+    margin-left: 14px;
+    margin-right: 14px;
+    width: 1px;
+}
+
+.button--cart svg{
+    margin-bottom: 1px;
+    margin-right: 8px;
+}
+
 
 /* adaptive */
 
@@ -99,6 +135,10 @@ header {
 
     .header__elem {
         justify-content: space-between;
+    }
+
+    .search_input{
+        width: 300px;
     }
 }
 
@@ -122,6 +162,10 @@ header {
 
     .menu__item{
         padding: 0 20px 0 0;
+    }
+
+    .search_input{
+        max-width: 300px;
     }
 }
 

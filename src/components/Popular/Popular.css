@@ -24,6 +24,7 @@
 }
 
 .popular__item > img {
+    max-width: 80px;
     float: left;
     margin: 14px 22px 14px 18px;
 }

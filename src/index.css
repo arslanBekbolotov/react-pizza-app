@@ -18,6 +18,7 @@ code {
   grid-auto-flow: row;
   grid-gap: 60px 20px;
   margin: 40px 0 70px;
+  flex-wrap: wrap;
 }
 
 .grid__elem {
