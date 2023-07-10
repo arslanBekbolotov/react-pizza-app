@@ -4,7 +4,7 @@
   text-align: center;
 }
 
-.root h1{
+.root h1 {
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -13,5 +13,3 @@
 .description {
   font-size: 20px;
 }
-
-

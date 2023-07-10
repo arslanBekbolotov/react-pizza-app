@@ -1,0 +1,156 @@
+.order {
+  padding-top: 2.37em;
+  padding-bottom: 4.37em;
+}
+
+.order__title {
+  font-size: 2.25em;
+  line-height: 1.36em;
+  margin-bottom: 0.83em;
+}
+
+.order__nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order__textbtn {
+  font-weight: 600;
+  line-height: 1.37em;
+  text-align: center;
+}
+
+.order__wrapper {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order__data {
+  display: flex;
+}
+
+.order__form .order__text {
+  font-weight: 400;
+  line-height: 1.37em;
+  display: inline-block;
+  width: 10em;
+  vertical-align: top;
+  margin-top: 0.56em;
+}
+
+.order__name {
+  margin-bottom: 1.25em;
+}
+
+.order__number {
+  margin-bottom: 1.25em;
+}
+
+.order__address {
+  margin-bottom: 4.37em;
+}
+
+.order__input {
+  background: #fff;
+  border: 1px solid #d1d3d9;
+  border-radius: 0.31em;
+  width: 16.87em;
+  height: 2.5em;
+}
+
+.list__wrapper {
+  width: 21.25em;
+  max-height: 31.25em;
+  background: #fff;
+  box-shadow: 0 0.31em 3.43em rgba(0, 0, 0, 0.05);
+  border-radius: 0.68em;
+  padding: 1.87em 1.87em 2.75em 1.87em;
+  display: flex;
+  flex-direction: column;
+}
+
+.list__title {
+  font-size: 1.12em;
+  line-height: 1.38em;
+  margin-bottom: 0.97em;
+  font-weight: 600;
+}
+
+.list__price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn--tocart{
+  padding: 10px;
+  border-radius: 1000em;
+  min-width: 14.625em;
+  color: #73798C;
+  text-align: center;
+  background-color: #ccc;
+  margin-right: 20px;
+}
+
+.btn--confirm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.81em 1.125em 0.81em 1.6875em;
+  background-color: #F96900;
+  border-radius: 1000em;
+  min-width: 16.875em;
+  color: #FFFFFF;
+  border: none;
+}
+
+.list__pricetext {
+  line-height: 1.37em;
+  font-weight: 400;
+}
+
+.list__sum {
+  font-weight: 600;
+  line-height: 1.37em;
+}
+
+.list__items {
+  overflow-y: scroll;
+}
+
+.item-str {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-wrap {
+  padding-top: 0.78em;
+  padding-bottom: 0.78em;
+}
+
+.item__id {
+  font-weight: 600;
+  line-height: 1.37em;
+}
+
+.item__price {
+  line-height: 1.37em;
+}
+
+.item__count {
+  font-size: 0.75em;
+  line-height: 1.16em;
+  color: #ccc;
+}
+
+@media (max-width: 1024px) {
+  .order__wrapper{
+    justify-content: center;
+  }
+
+  .order__form{
+    margin-bottom: 40px;
+  }
+
+}

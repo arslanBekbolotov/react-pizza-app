@@ -1,24 +1,27 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 .grid__container {
   display: grid;
-  grid-template-columns: repeat(4, 250px);
+  grid-template-columns: repeat(4, 239px);
   grid-auto-flow: row;
   grid-gap: 60px 20px;
   margin: 40px 0 70px;
-  flex-wrap: wrap;
+}
+
+.none{
+  display: none;
 }
 
 .grid__elem {
@@ -28,8 +31,7 @@ code {
 }
 
 .grid__elem img {
-  position: relative;
-  transition: transform .2s ease-out;
+  transition: transform 0.2s ease-out;
   margin: 0 auto;
 }
 
@@ -45,7 +47,7 @@ code {
 
 .grid__elem > p {
   font: 400 14px/19px var(--font-text);
-  color: #73798C;
+  color: #73798c;
   margin-bottom: 30px;
 }
 
@@ -60,21 +62,18 @@ code {
 
 @media (max-width: 1024px) {
   .grid__container {
-    grid-template-columns: 33% 33% 33%
+    grid-template-columns: 32% 32% 32%;
   }
 }
 
 @media (max-width: 768px) {
   .grid__container {
-    grid-template-columns: 50% 50%
+    grid-template-columns: 50% 50%;
   }
 }
 
 @media (max-width: 630px) {
   .grid__container {
-    grid-template-columns: 100%
+    grid-template-columns: 100%;
   }
 }
-
-
-

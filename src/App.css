@@ -32,10 +32,6 @@ h2 {
   color: #000;
 }
 
-.wrapper {
-  max-width: 1280px;
-  margin: 0 auto;
-}
 
 .container {
   max-width: 1060px;
@@ -69,10 +65,6 @@ button {
 .button_gray button:hover {
   background-color: #ffd0b2;
   transition: 0.3s;
-}
-
-#button_dynamic {
-  cursor: pointer;
 }
 
 

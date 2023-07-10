@@ -45,9 +45,9 @@ header {
     border: 1px solid rgba(0,0,0,.1);
     border-radius: 10px;
     font-size: 16px;
-    padding: 12px 20px 12px 42px;
-    width: 400px;
-    margin: 20px 0 20px;
+    padding: 12px 21px 12px 55px;
+    width: 390px;
+    margin: 20px;
 }
 
 .menu__box {
@@ -90,12 +90,17 @@ header {
     display: none;
 }
 
+.header__item{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .button--cart{
     display: flex;
     align-items: center;
     line-height: 23px;
     padding: 12px 25px;
-    -webkit-touch-callout: none;
     background-color: #fe5f1e;
     border: 1px solid transparent;
     border-radius: 30px;
@@ -103,9 +108,6 @@ header {
     min-width: 100px;
     text-align: center;
     transition: background-color .15s ease-in-out,border-color .15s ease-in-out;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     color:#fff;
 }
 
@@ -155,17 +157,8 @@ header {
         justify-content: space-between;
     }
 
-    .adaptive__menu {
-        display: block;
-        overflow: hidden;
-    }
-
-    .menu__item{
+    .menu__item {
         padding: 0 20px 0 0;
-    }
-
-    .search_input{
-        max-width: 300px;
     }
 }
 
@@ -200,6 +193,11 @@ header {
 
     .button_orange{
         display: none;
+    }
+
+    .search_input{
+        margin:20px 0;
+        max-width: 250px;
     }
 
     .btn-sm{
