@@ -1,20 +1,20 @@
-.search_input{
-    position: relative;
+.search_input {
+  position: relative;
 }
 
-.search_icon{
-    position: absolute;
-    width: 22px;
-    z-index: 2;
-    cursor: pointer;
+.search_icon {
+  position: absolute;
+  width: 22px;
+  z-index: 2;
+  cursor: pointer;
 }
 
-.search_close__icon{
-    top:59px;
-    right: 378px;
+.search_close__icon {
+  top: 59px;
+  right: 378px;
 }
 
-.search_find__icon{
-    top: 57px;
-    left: 626px;
+.search_find__icon {
+  top: 57px;
+  left: 626px;
 }

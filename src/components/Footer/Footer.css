@@ -145,10 +145,9 @@ footer {
   transition: 0.3s;
 }
 
-#footer__email{
-  color:#fff;
+#footer__email {
+  color: #fff;
 }
-
 
 @media (max-width: 768px) {
   .footer__menu > ul {

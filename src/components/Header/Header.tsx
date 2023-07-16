@@ -4,8 +4,16 @@ import logoText from "../../assets/header/logo-text.svg";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import Search from "../Search/Search";
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
+import { useAppSelector } from "../../redux/hooks/hooks";
 
 const Header = () => {
+  const { items, totalPrice } = useAppSelector((state) => state.cart);
+  const productsCount = items.reduce((acc, value) => {
+    return acc + value.count;
+  }, 0);
+
   return (
     <header>
       <div className="container">
@@ -19,10 +27,10 @@ const Header = () => {
               </div>
             </Link>
             <div className="header__item">
-              <Search/>
+              <Search />
               <div className="header__cart">
                 <Link to={"/cart"} className="button--cart">
-                  <span>0 ₽</span>
+                  <span>{totalPrice} ₽</span>
                   <div className="button__delimiter"></div>
                   <svg
                     width="18"
@@ -53,7 +61,7 @@ const Header = () => {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <span>3</span>
+                  <span>{productsCount}</span>
                 </Link>
               </div>
             </div>

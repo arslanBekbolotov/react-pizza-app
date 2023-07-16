@@ -1,20 +1,22 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { axiosApi } from "../../axiosApi";
-import {IGoods, IPopular} from "../../types";
+import { IGoods, IPopular } from "../../types";
 import Popular from "../../components/Popular/Popular";
 import Dishes from "../../components/Dishes/Dishes";
 import Skeleton from "../../components/Skeleton/Skeleton";
-import {useSelector} from "react-redux";
-import {RootState} from "../../redux/store";
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
 
 const Home = () => {
   const [dishes, setDishes] = useState<IGoods[]>([]);
   const [popularDishes, setPopularDishes] = useState<IPopular[]>([]);
   const [loading, setLoading] = useState(false);
-  const searchValue = useSelector((state:RootState) => state.filter.searchValue);
-  const search = searchValue ? `search=${searchValue}` : '';
+  const searchValue = useSelector(
+    (state: RootState) => state.filter.searchValue,
+  );
+  const search = searchValue ? `search=${searchValue}` : "";
 
-  const fetchData = useCallback(async (search:string) => {
+  const fetchData = useCallback(async (search: string) => {
     try {
       setLoading(true);
       const response = await axiosApi<IGoods[]>(`items?${search}`);
@@ -51,14 +53,14 @@ const Home = () => {
   useEffect(() => {
     void fetchData(search);
     void getPopularDishes();
-  }, [fetchData, getPopularDishes,search]);
+  }, [fetchData, getPopularDishes, search]);
 
   return (
     <div className="container">
       {!loading && dishes ? (
         <>
           <Popular popularList={popularDishes} />
-          <Dishes dishes={dishes} title={"All"}/>
+          <Dishes dishes={dishes} title={"All"} />
         </>
       ) : (
         <div className="grid__container">

@@ -32,7 +32,6 @@ h2 {
   color: #000;
 }
 
-
 .container {
   max-width: 1060px;
   margin: 0 auto;
@@ -67,6 +66,12 @@ button {
   transition: 0.3s;
 }
 
+.button_orange__span {
+  color: #ed5d08;
+  padding: 0 6px;
+  border-radius: 10px;
+  background: #fff;
+}
 
 /* vars */
 :root {

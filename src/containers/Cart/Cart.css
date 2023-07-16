@@ -1,73 +1,28 @@
 .order {
-  padding-top: 2.37em;
-  padding-bottom: 4.37em;
+  margin-bottom: 40px;
 }
 
-.order__title {
-  font-size: 2.25em;
-  line-height: 1.36em;
-  margin-bottom: 0.83em;
-}
-
-.order__nav {
+.order__top {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  margin-bottom: 40px;
 }
 
-.order__textbtn {
-  font-weight: 600;
-  line-height: 1.37em;
-  text-align: center;
-}
-
-.order__wrapper {
-  flex-wrap: wrap;
+.cart__clear {
   display: flex;
-  justify-content: space-between;
-}
-
-.order__data {
-  display: flex;
-}
-
-.order__form .order__text {
-  font-weight: 400;
-  line-height: 1.37em;
-  display: inline-block;
-  width: 10em;
-  vertical-align: top;
-  margin-top: 0.56em;
-}
-
-.order__name {
-  margin-bottom: 1.25em;
-}
-
-.order__number {
-  margin-bottom: 1.25em;
-}
-
-.order__address {
-  margin-bottom: 4.37em;
-}
-
-.order__input {
-  background: #fff;
-  border: 1px solid #d1d3d9;
-  border-radius: 0.31em;
-  width: 16.87em;
-  height: 2.5em;
+  align-items: center;
 }
 
 .list__wrapper {
-  width: 21.25em;
-  max-height: 31.25em;
+  max-height: 60vh;
   background: #fff;
   box-shadow: 0 0.31em 3.43em rgba(0, 0, 0, 0.05);
   border-radius: 0.68em;
   padding: 1.87em 1.87em 2.75em 1.87em;
   display: flex;
   flex-direction: column;
+  margin-bottom: 40px;
 }
 
 .list__title {
@@ -82,25 +37,31 @@
   justify-content: space-between;
 }
 
-.btn--tocart{
+.btn--cart {
   padding: 10px;
   border-radius: 1000em;
-  min-width: 14.625em;
-  color: #73798C;
+  min-width: 3em;
   text-align: center;
-  background-color: #ccc;
-  margin-right: 20px;
 }
 
-.btn--confirm {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.81em 1.125em 0.81em 1.6875em;
-  background-color: #F96900;
-  border-radius: 1000em;
-  min-width: 16.875em;
-  color: #FFFFFF;
+.btn_back {
+  padding: 10px;
+}
+
+.btn--cart:hover {
+  background: #f96900;
+  color: #fff;
+}
+
+.tocart {
+  margin-right: 20px;
+  color: #73798c;
+  background-color: #ccc;
+}
+
+.confirm {
+  background-color: #f96900;
+  color: #ffffff;
   border: none;
 }
 
@@ -145,12 +106,11 @@
 }
 
 @media (max-width: 1024px) {
-  .order__wrapper{
+  .order__wrapper {
     justify-content: center;
   }
 
-  .order__form{
+  .order__form {
     margin-bottom: 40px;
   }
-
 }
