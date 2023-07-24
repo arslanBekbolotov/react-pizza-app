@@ -192,12 +192,8 @@ header {
     margin-right: 50px;
   }
 
-  .button_orange {
-    display: none;
-  }
-
   .search_input {
-    margin: 20px 0;
+    margin: 20px 10px 20px 0;
     max-width: 250px;
   }
 

@@ -14,6 +14,7 @@ const Home = () => {
   const searchValue = useSelector(
     (state: RootState) => state.filter.searchValue,
   );
+
   const search = searchValue ? `search=${searchValue}` : "";
 
   const fetchData = useCallback(async (search: string) => {
@@ -59,7 +60,7 @@ const Home = () => {
     <div className="container">
       {!loading && dishes ? (
         <>
-          <Popular popularList={popularDishes} />
+          {searchValue.length < 2 && <Popular popularList={popularDishes} />}
           <Dishes dishes={dishes} title={"All"} />
         </>
       ) : (

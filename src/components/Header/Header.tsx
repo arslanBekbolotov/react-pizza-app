@@ -1,15 +1,14 @@
-import React from "react";
+import React, {useRef, useState} from "react";
 import logo from "../../assets/header/logo.svg";
 import logoText from "../../assets/header/logo-text.svg";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import Search from "../Search/Search";
-import { useSelector } from "react-redux";
-import { RootState } from "../../redux/store";
 import { useAppSelector } from "../../redux/hooks/hooks";
 
 const Header = () => {
   const { items, totalPrice } = useAppSelector((state) => state.cart);
+  const [menuToggle,setMenuToggle] = useState(false);
   const productsCount = items.reduce((acc, value) => {
     return acc + value.count;
   }, 0);
@@ -68,11 +67,11 @@ const Header = () => {
           </div>
           <div id="header_sticky" className="header__elem">
             <div className="hamburger-menu">
-              <input id="menu__toggle" type="checkbox" />
+              <input id="menu__toggle" type="checkbox" checked={menuToggle} onClick={()=>setMenuToggle(prevState => !prevState)}/>
               <label className="menu__btn" htmlFor="menu__toggle">
                 <span></span>
               </label>
-              <ul className="menu__box">
+              <ul className="menu__box" onClick={()=>setMenuToggle(prevState => !prevState)}>
                 <Link className="menu__item" to={"/"}>
                   Все
                 </Link>
