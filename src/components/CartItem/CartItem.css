@@ -39,5 +39,33 @@
   padding: 0 10px;
 }
 
-.cart__element_closeBtn {
+@media (max-width: 1000px) {
+  .cart__element {
+    flex-wrap: wrap;
+  }
+
+  .cart__element_info {
+    margin-left: 5px;
+  }
+
+  .cart__element_title {
+    font-size: 25px;
+    margin: 0 10px 8px 0;
+  }
+
+  .cart__element_block {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 auto;
+  }
+
+  .cart__element_block img {
+    width: 40px;
+  }
+
+  .cart__element_price {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 20px 0 20px;
+  }
 }

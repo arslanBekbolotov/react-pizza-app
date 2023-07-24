@@ -55,7 +55,8 @@ const cartSlice = createSlice({
       }, 0);
     },
     clearProducts(state) {
-      state = initialState;
+      state.items = [];
+      state.totalPrice = 0;
     },
   },
 });

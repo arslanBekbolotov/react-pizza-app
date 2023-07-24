@@ -65,7 +65,7 @@ const Cart = () => {
                   ></path>
                 </svg>
 
-                <span>Очистить корзину</span>
+                <span className="clear__cart" onClick={onClickClear}>Очистить корзину</span>
               </div>
             </div>
             <div className="order__list">
